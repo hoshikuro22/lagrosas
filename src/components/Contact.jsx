@@ -10,7 +10,7 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const databaseReference = collection(database, 'Info');
+    const databaseReference = collection(database, 'Data');
 
     const addData = () => {
         addDoc(databaseReference, {
@@ -53,7 +53,9 @@ const Contact = () => {
                     placeholder='Enter your message' 
                     className='p-2 bg-transparent border-2 rounded-md text-white focus-outline:none'
                     onChange={(event) => setMessage(event.target.value)}
-                    value={message}></textarea>
+                    value={message}
+                    >
+                   </textarea>
 
                     <button 
                     className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex item-center rounded-md hover:scale-110 duration-300'
