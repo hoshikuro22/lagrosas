@@ -10,7 +10,7 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const databaseReference = collection(database, 'Data');
+    const databaseReference = collection(database, 'Giatay');
 
     const addData = () => {
         addDoc(databaseReference, {
@@ -30,10 +30,10 @@ const Contact = () => {
                 </p>
             </div>
             <div className='flex justify-center items-center'>
-                <form action="" className='flex flex-col w-full h-full md:w-1/2'>
+                <div action="" className='flex flex-col w-full h-full md:w-1/2'>
                     <input 
                     type="text" 
-                    name="name" 
+                    // name="name" 
                     placeholder='Enter your Name' 
                     className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
                     onChange={(event) => setName(event.target.value)}
@@ -41,14 +41,14 @@ const Contact = () => {
 
                     <input 
                     type="text" 
-                    name="email" 
+                    // name="email" 
                     placeholder='Enter your Email' 
-                    className=' my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' 
+                    className=' my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none flex-col' 
                     onChange={(event) => setEmail(event.target.value)}
                     value={email} />
 
                     <textarea 
-                    name="message" 
+                    // name="message" 
                     rows="10" 
                     placeholder='Enter your message' 
                     className='p-2 bg-transparent border-2 rounded-md text-white focus-outline:none'
@@ -62,7 +62,7 @@ const Contact = () => {
                     onClick={addData}> 
                     Submit
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
