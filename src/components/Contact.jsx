@@ -26,7 +26,7 @@ const Contact = () => {
             <div className='pb-2'> 
                 <p className='text-4xl font-bold inline border-b-4  border-gray-500'>Contact</p>
                 <p className='py-6'>
-                    Submit your message below
+                    Submit your message belows
                 </p>
             </div>
             <div className='flex justify-center items-center'>
